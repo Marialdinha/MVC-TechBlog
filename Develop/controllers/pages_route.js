@@ -11,7 +11,9 @@ router.get('/',  async (req, res) => {
       include: {model: User}
     });
     const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
-   
+    BlogData.logged_in = req.session.logged_in
+    console.log(BlogData)
+
     if (!BlogData) {
           return res.render('blogWiew', {BlogData: []});
       }
@@ -25,6 +27,15 @@ router.get('/',  async (req, res) => {
 }
 });
 
+router.get('/comment', withAuth, async (req, res) => {
+  try {
+      res.render('comment', {
+        logged_in: req.session.logged_in,
+      });
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
 
 router.get('/blogEnter', withAuth, async (req, res) => {
   try {

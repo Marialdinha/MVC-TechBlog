@@ -2,21 +2,30 @@
   <div class='menu-container' id="Blog-comment" align="center">
       <br />
       <h2>Welcome to the Tech Blogs</h2>
+    <h5>logged_in - {{BlogData.logged_in}}</h5>
     {{#each BlogData as |eachBlogData|}}
     <div class="gallery-name blog-size" >
+    
       <h4> <span style="text-transform:uppercase;" >{{eachBlogData.title}}</span> posted by: {{eachBlogData.user.username}}</h4>
       <h4> {{eachBlogData.content}}</h4>
-    </div>
+      <h5> {{eachBlogData.id}}</h5>
+      <h5>logged_in - {{../logged_in}}</h5>
+      {{#if ../logged_in}}
+          <button class="btn btn-primary" id="add-comment" onclick="newCommentHandler(event)" >Leave a Note</button>
+      
+      {{/if}}
+
+      
+       </div>
+     {{/each}}
+   
+   
      <br/>
-      <div class="form-group">
-           {{!-- {{#if logged_in}} --}}
-            <button class="btn btn-primary" type="submit">login</button>
-           {{!-- {{/if}} --}}
-        </div>
-    {{/each}}
+     
+ 
     
   </div>
-
+   
 
 <!-- This is the form for retrieving saved logs -->
-<script src='/assets/js/comments'></script>
+<script src='/assets/js/Blogs.js'></script>
