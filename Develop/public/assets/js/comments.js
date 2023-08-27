@@ -23,7 +23,7 @@ async function newCommentHandler(event) {
   }
 
 
-const formElement = document.querySelector('#comment-container');
-if (formElement) {
-document.querySelector('#enter-comment').addEventListener('submit', newCommentHandler);
-} 
+// const formElement = document.querySelector('#comment-container');
+// if (formElement) {
+// document.querySelector('#enter-comment').addEventListener('submit', newCommentHandler);
+// } 

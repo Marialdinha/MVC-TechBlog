@@ -3,11 +3,13 @@
   <br />
   <label for='note'><big>Comment Content:</big></label>
   <br />
+  <h4>blog id - {{blog_id}}</h4>
   <textarea class="text-border" id='note' name='note' rows='5' cols='30'></textarea>
-  </div>
-  <br /> 
-    <button class="btn btn-primary" id="enter-comment" type="submit">Enter New Note</button>
+   <br /> 
+    <button class="btn btn-primary" id="enter-comment" onclick="newCommentHandler(event)">Enter New Note</button>
   
+  </div>
+ 
 </div>
 
 <!-- This is the form for saving new comments -->

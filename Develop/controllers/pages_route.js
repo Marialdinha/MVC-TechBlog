@@ -27,10 +27,11 @@ router.get('/',  async (req, res) => {
 }
 });
 
-router.get('/comment', withAuth, async (req, res) => {
+router.get('/comment/:blogID', withAuth, async (req, res) => {
   try {
       res.render('comment', {
         logged_in: req.session.logged_in,
+        blog_id:req.params.blogID,
       });
   } catch (err) {
       res.status(500).json(err);

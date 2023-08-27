@@ -25,9 +25,11 @@ async function newBlogHandler(event) {
 
 async function newCommentHandler(event) {
   event.preventDefault();
+  let blog_id=event.target.dataset.blog_id
   console.log("Iside click buttom for note")
+  console.log(blog_id)
 
-  window.location.replace('/comment');
+  window.location.replace(`/comment/${blog_id}`);
 
 }
 
