@@ -1,16 +1,14 @@
-
 <div class='menu-container' id="comment-container" align="center">
-  <br />
-  <label for='note'><big>Comment Content:</big></label>
-  <br />
-  <h4>blog id - {{blog_id}}</h4>
-  <textarea class="text-border" id='note' name='note' rows='5' cols='30'></textarea>
-   <br /> 
-    <button class="btn btn-primary" id="enter-comment" onclick="newCommentHandler(event)">Enter New Note</button>
-  
-  </div>
- 
+  <form class='new-post-form' id="enter-note">
+    <br />
+    <label for='note1'><big>Comment Content:</big></label>
+    <br />
+    <h4>blog id - {{blog_id}}</h4>
+    <textarea class="text-border" id='note1' name='note1' rows='5' cols='30'></textarea>
+    <br />
+    {{!-- <button class="btn btn-primary" id="enter-note" onclick="newNoteHandler(event)">Enter New Note</button> --}}
+    <button class="btn btn-primary" id="enter-note" data-blog_id={{blog_id}} onclick="newNoteHandler(event)">Enter New Note</button> 
+  </form>
 </div>
-
 <!-- This is the form for saving new comments -->
-<script src='/assets/js/comments'></script>
+<script src='/assets/js/comments.js'></script>

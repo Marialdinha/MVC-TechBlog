@@ -2,16 +2,20 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 const Blog = require('../models/blogs');
 const User = require('../models/users');
+const Comments = require('../models/comments');
 
 // The `/` endpoint
 
 router.get('/',  async (req, res) => {
   try {
     const dbBloglData = await Blog.findAll({
-      include: {model: User}
+      // include: {model: User}
+      include: {model: User, include:[{model: Comments}]}
     });
     const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
     BlogData.logged_in = req.session.logged_in
+    BlogData.user_id = req.session.user_id
+    console.log("******** BlogData *******")
     console.log(BlogData)
 
     if (!BlogData) {
@@ -20,6 +24,7 @@ router.get('/',  async (req, res) => {
 
     res.render('blogWiew', {
       logged_in: req.session.logged_in,
+      user_id: req.session.user_id,
       BlogData : BlogData,
     });
 } catch (err) {

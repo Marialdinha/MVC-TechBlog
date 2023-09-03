@@ -1,10 +1,10 @@
 async function newBlogHandler(event) {
   event.preventDefault();
   const tileIn = document.querySelector('#destination').value;
-  const contentIn = document.querySelector('#note').value;
+  const contentIn = document.querySelector('#blog').value;
   let leancontent =  contentIn.trim();
   
-  // Send post request to add a new tavel information
+  // Send post request to add a new Blog information
   let response = await fetch(`/api/Blogs`, {
     method: 'POST',
     body: JSON.stringify({
@@ -26,11 +26,8 @@ async function newBlogHandler(event) {
 async function newCommentHandler(event) {
   event.preventDefault();
   let blog_id=event.target.dataset.blog_id
-  console.log("Iside click buttom for note")
-  console.log(blog_id)
-
   window.location.replace(`/comment/${blog_id}`);
-
+ 
 }
 
 const formElement1 = document.querySelector('.new-post-form');
@@ -38,7 +35,3 @@ if (formElement1) {
 document.querySelector('.new-post-form').addEventListener('submit', newBlogHandler);
 } 
 
-// const formElement2 = document.querySelector('#Blog-comment');
-// if (formElement2) {
-// document.querySelector('#add-comment').addEventListener('click', newCommentHandler);
-// } 

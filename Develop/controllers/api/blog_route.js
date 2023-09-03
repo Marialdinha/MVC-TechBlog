@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const Blog = require('../../models/blogs');
-const User = require('../../models/users');
+// const User = require('../../models/users');
 
 // /api/Blogs  end point
 

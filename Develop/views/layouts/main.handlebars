@@ -18,17 +18,18 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#"><b>The Tech Blog</b></a>
                 </div class="text-dark">
-                <ul class="nav navbar-nav ">
-                    <li class="active"><a href="/">Blog List</a></li>
-                    <li><a href="/blogEnter">Create Blog</a></li>
+                <ul class="nav navbar-nav text-primary">
+                    <li class="active"><a href="/"> &nbsp; &nbsp;Blog List</a></li>
+                    <li><a href="/blogEnter"> &nbsp; &nbsp; Create Blog</a></li>
                     {{#unless logged_in}} 
-                       <li><a href="/login">Login</a></li>
-                       <li><a href="/signup">Sign-Up</a></li>
+                       <li><a href="/login">  &nbsp; &nbsp; Login</a></li>
+                       <li><a href="/signup"> &nbsp; &nbsp;Sign-Up</a></li>
                    {{/unless}}
+                   {{#if logged_in}}
+                       <li><a><button id="logout" class=" btn-link btn-no-style ">Logout</button></a></li>
+                    {{/if}}
                 </ul>
-                {{#if logged_in}}
-                <button id="logout" class=" nav navbar-nav btn-no-style btn-link">Logout</button>
-                {{/if}}
+              
             </div>
         </nav>
     </header>
