@@ -10,7 +10,7 @@ router.get('/',  async (req, res) => {
   try {
     const dbBloglData = await Blog.findAll({
       // include: {model: User}
-      include: {model: User, include:[{model: Comments}]}
+      include: [{model: User}, {model: Comments}]
     });
     const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
     BlogData.logged_in = req.session.logged_in

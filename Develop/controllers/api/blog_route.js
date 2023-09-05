@@ -4,26 +4,26 @@ const Blog = require('../../models/blogs');
 
 // /api/Blogs  end point
 
-router.get('/',  async (req, res) => {
-  try {
-   // find all blogs by user
-  const dbBloglData = await Blog.findAll({
-    where:{user_id: req.session.user_id},
-  });
-  const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
+// router.get('/',  async (req, res) => {
+//   try {
+//    // find all blogs by user
+//   const dbBloglData = await Blog.findAll({
+//     where:{user_id: req.session.user_id},
+//   });
+//   const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
 
-  if (!BlogData) {
-    return res.render('blogWiew', {BlogData: []});
-  }
+//   if (!BlogData) {
+//     return res.render('blogWiew', {BlogData: []});
+//   }
 
-  res.render('blogWiew', {
-      logged_in: req.session.logged_in,
-      BlogData : BlogData,
-    });
-  } catch (err) {
-      res.status(500).json(err);
-  }
-});
+//   res.render('blogWiew', {
+//       logged_in: req.session.logged_in,
+//       BlogData : BlogData,
+//     });
+//   } catch (err) {
+//       res.status(500).json(err);
+//   }
+// });
 
 router.post('/', async (req, res) => {
   try { 
