@@ -11,12 +11,13 @@
     {{!-- <h5> {{eachBlogData.id}}</h5>
     <h5> User id: {{../user_id}}</h5>
     <h5>logged_in - {{../logged_in}}</h5> --}}
+     <h2></h2>
     {{#if eachBlogData.comments}} 
          {{> comment-details eachBlogData=eachBlogData}}
     {{/if}}
     {{#if ../logged_in}}
     <button class="btn btn-primary" id="add-comment" data-blog_id={{eachBlogData.id}}
-      onclick="newCommentHandler(event)">Leave a Note</button>
+      onclick="newCommentHandler(event)">Leave a Comment</button>
     {{/if}}
   </div>
   {{/each}}

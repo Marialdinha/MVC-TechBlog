@@ -1,12 +1,7 @@
-
-   <h4>Comments</h4>
-  <!-- The contents of this card links to the gallery page using the gallery ID -->
-  {{!-- <a href="/api/comment{{eachBlogData.id}}"> --}}
-    <!-- The card contains the gallery name as the card header -->
-  {{#each eachBlogData.comments as |eachcomment|}}
+  {{#each eachBlogData.comments as |eachComment|}}
   <section class="card">
-  <h5>  placed by: {{eachcomment.user_id}}</h5>
-  <h5> {{eachcomment.comment_contents}}</h5>
+  <h5> Comment placed by: {{eachComment.user_id}}</h5>
+  <h5> {{eachComment.comment_contents}}</h5>
   </section>
   {{/each}}
    

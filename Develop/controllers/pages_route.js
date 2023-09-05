@@ -7,11 +7,22 @@ const Comments = require('../models/comments');
 // The `/` endpoint
 
 router.get('/',  async (req, res) => {
+
+
   try {
-    const dbBloglData = await Blog.findAll({
-      // include: {model: User}
-      include: [{model: User}, {model: Comments}]
-    });
+      let dbBloglData;
+
+      if (req.session.logged_in){
+          dbBloglData = await Blog.findAll({
+          where:{user_id: req.session.user_id},
+          include: [{model: User}, {model: Comments}]
+          });
+      }else {
+          dbBloglData = await Blog.findAll({
+          include: [{model: User}, {model: Comments}]
+          });
+      }
+  
     const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
     BlogData.logged_in = req.session.logged_in
     BlogData.user_id = req.session.user_id
@@ -34,6 +45,8 @@ router.get('/',  async (req, res) => {
 
 router.get('/comment/:blogID', withAuth, async (req, res) => {
   try {
+    console.log("******** comment *******")
+    console.log(req.params.blogID)
       res.render('comment', {
         logged_in: req.session.logged_in,
         blog_id:req.params.blogID,
