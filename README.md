@@ -12,7 +12,7 @@
 
 ## Screenshot
 This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
-![localhost](./Develop//assets/Screenshot-TechBlog.png) <br/> <br/> 
+![localhost](./Develop/assets/Screenshot-TechBlog.png) <br/> <br/> 
 
 ## Installation
 1 - On Develop folder start mysql , then run: source db/schema.sql <br/>
