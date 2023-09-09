@@ -12,10 +12,14 @@
 
 ## Screenshot
 This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
-![localhost](./assets/Screenshot-TechBlog.png) <br/> <br/> 
+![localhost](./Develop//assets/Screenshot-TechBlog.png) <br/> <br/> 
 
 ## Installation
+1 - On Develop folder start mysql , then run: source db/schema.sql <br/>
+2 - On bash terminal, run: npm i (to initialize) <br/>
+3 - On bash terminal, run: npm start (for the app to start running on the server) <br/>
 
 ## Usage
 
 ## Contact
+You can contact me via email: marialda@bellsouth.net
