@@ -1,7 +1,9 @@
-  {{#each eachBlogData.comments as |eachComment|}}
-  <section class="card">
-  <h5> Comment placed by: {{eachComment.user_id}}</h5>
+
+{{#each eachBlogData.comments as |eachComment|}}
+  <section class="card bg-info" >
+  <h5> Commented by: {{eachComment.user.username}}</h5>
   <h5> {{eachComment.comment_contents}}</h5>
   </section>
   {{/each}}
+  
    

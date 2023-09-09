@@ -16,36 +16,4 @@ router.post('/', async (req, res) => {
   }
   });
 
-  // router.get('/:blog_id',  async (req, res) => {
-  //   try {  
-
-  //       const dbCommentlData = await Comment.findAll({
-  //       where:{blog_id: req.session.blog_id},
-  //       include: {model: User},
-  //     });
-  //     const commentData = dbCommentlData.map((comment_info) => comment_info.get({plain: true}));
-  //     commentData.logged_in = req.session.logged_in
-  //     commentData.user_id = req.session.user_id
-  //     console.log("******** CommentData *******")
-  //     console.log(commentData)
-  
-  //     if (!commentData) {
-  //           return res.render('blogWiew', {BlogData: []});
-  //       }
-  
-  //       console.log("**************************************")
-  //       console.log("********* CommentData  ****************")
-  //       console.log(commentData)
-
-
-  //     res.render('blogWiew', {
-  //       logged_in: req.session.logged_in,
-  //       user_id: req.session.user_id,
-  //       commentData : commentData,
-  //     });
-  // } catch (err) {
-  //     res.status(500).json(err);
-  // }
-  // });
-
   module.exports = router;

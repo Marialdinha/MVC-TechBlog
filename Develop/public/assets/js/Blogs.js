@@ -30,6 +30,26 @@ async function newCommentHandler(event) {
  
 }
 
+async function deleteBlog(event) {
+  event.preventDefault();
+
+   let blog_id=event.target.dataset.blog_id
+   console.log("********* deleteBlog ************")
+      console.log("********blog_id*************")
+    console.log(blog_id)
+    let response = await fetch(`/api/Blogs/${blog_id}`, {
+    method: 'DELETE',
+    });
+
+  //if blog is deleted, blog page will show
+  if (response.ok) {
+    window.location.replace('/');
+  } else {
+    alert('Failed to delete blog');
+  }
+}
+
+
 const formElement1 = document.querySelector('.new-post-form');
 if (formElement1) {
 document.querySelector('.new-post-form').addEventListener('submit', newBlogHandler);

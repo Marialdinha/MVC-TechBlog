@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/jass.css" />
 </head>
 
 <body>
@@ -26,7 +27,8 @@
                        <li><a href="/signup"> &nbsp; &nbsp;Sign-Up</a></li>
                    {{/unless}}
                    {{#if logged_in}}
-                       <li><a><button id="logout" class=" btn-link btn-no-style ">Logout</button></a></li>
+                       <li><a href="/userBlogs">  &nbsp; &nbsp; My Blogs</a></li>
+                       <li><a><button id="logout" class=" btn-link btn-no-style text-dark">Logout</button></a></li>
                     {{/if}}
                 </ul>
               
@@ -34,7 +36,7 @@
         </nav>
     </header>
 
-    <main class="bg-info "  align="center">
+    <main class=" navbar-nav  bg-info w-100 "  >
         {{{body}}}
     </main>
 

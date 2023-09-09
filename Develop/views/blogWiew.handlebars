@@ -3,21 +3,28 @@
   <h2>Welcome to the Tech Blogs</h2>
   {{!-- <h5>logged_in - {{BlogData.logged_in}}</h5> --}}
   {{#each BlogData as |eachBlogData|}}
+  <br />
   <div class="gallery-name blog-size" id="blogData">
 
     <h4> <span style="text-transform:uppercase;" id="blog_text"
         data-blog_id={{eachBlogData.id}}>{{eachBlogData.title}}</span> posted by: {{eachBlogData.user.username}}</h4>
     <h4> {{eachBlogData.content}}</h4>
     {{!-- <h5> {{eachBlogData.id}}</h5>
-    <h5> User id: {{../user_id}}</h5>
-    <h5>logged_in - {{../logged_in}}</h5> --}}
+    <h5> User id: {{../user_id}}</h5> 
+    <h5>logged_in - {{../logged_in}}</h5> 
+    <h5>blogList - {{../blogList}}</h5> --}}
      <h2></h2>
     {{#if eachBlogData.comments}} 
          {{> comment-details eachBlogData=eachBlogData}}
     {{/if}}
-    {{#if ../logged_in}}
+    {{#if ../logged_in }}
+     {{#if ../blogList}}
     <button class="btn btn-primary" id="add-comment" data-blog_id={{eachBlogData.id}}
       onclick="newCommentHandler(event)">Leave a Comment</button>
+      {{else}}
+    <button class="btn btn-primary" id="delete-blog" data-blog_id={{eachBlogData.id}}
+      onclick="deleteBlog(event)">Delete Blog</button>
+      {{/if}}
     {{/if}}
   </div>
   {{/each}}
