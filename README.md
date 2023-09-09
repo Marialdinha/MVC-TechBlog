@@ -6,7 +6,14 @@
   - [Screenshot](#screenshot)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Videos](#videos)
   - [Contact](#contact)
 
 ## Description
+
+## Screenshot
+
+## Installation
+
+## Usage
+
+## Contact
