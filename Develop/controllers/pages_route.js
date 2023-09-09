@@ -19,15 +19,13 @@ router.get('/',  async (req, res) => {
       if (req.session.logged_in){
           dbBloglData = await Blog.findAll({
           where:{user_id:{ [sequelize.Op.not]: req.session.user_id}},
-          include : {all:true, nested:true}
+          include : {all:true, nested:true},
           });
       }else {
           dbBloglData = await Blog.findAll({
-            include : {all:true, nested:true}
+            include : {all:true, nested:true},
           });
       }
-      // console.log("************************")  
-    //  console.log(JSON.stringify(dbBloglData, null, 4));
     
     const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));
     BlogData.logged_in = req.session.logged_in
@@ -54,7 +52,7 @@ router.get('/userBlogs',  async (req, res) => {
     
     const dbBloglData = await Blog.findAll({
     where:{user_id: req.session.user_id},
-    include : {all:true, nested:true}
+    include : {all:true, nested:true},
     });
   
     const BlogData = dbBloglData.map((blog_info) => blog_info.get({plain: true}));

@@ -34,9 +34,7 @@ async function deleteBlog(event) {
   event.preventDefault();
 
    let blog_id=event.target.dataset.blog_id
-   console.log("********* deleteBlog ************")
-      console.log("********blog_id*************")
-    console.log(blog_id)
+
     let response = await fetch(`/api/Blogs/${blog_id}`, {
     method: 'DELETE',
     });
