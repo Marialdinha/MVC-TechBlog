@@ -21,6 +21,13 @@ This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
 3 - On bash terminal, run: npm start (for the app to start running on the server) <br/>
 
 ## Usage
+1 - User can see all posts in the "Blog List" without being logged in. <br/>
+2-  To do anything else, user has to login. <br/>
+3-  If user is not created in the database, then the user has to Sign-Up. <br/>
+4-  First time user is created in the database, then user is automatically logged in. <br/> 
+5 - If user is already created in the database, then user can just login in the login page.  <br/>
+6-  When logged in, user can create a blog or comment in someone's else blog.  <br/> 
+7-  When logged in, user see their own blog on "My Blogs" and all other blogs in "Blog List".  <br/>
 
 ## Contact
 You can contact me via email: marialda@bellsouth.net
