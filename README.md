@@ -9,6 +9,7 @@
   - [Contact](#contact)
 
 ## Description
+his is a CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts. 
 
 ## Screenshot
 This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
