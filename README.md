@@ -11,6 +11,8 @@
 ## Description
 
 ## Screenshot
+This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
+![localhost](./assets/Screenshot-TechBlog.png) <br/> <br/> 
 
 ## Installation
 
