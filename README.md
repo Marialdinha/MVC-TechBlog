@@ -9,7 +9,9 @@
   - [Contact](#contact)
 
 ## Description
-his is a CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts. 
+This is a CMS-style blog site, where developers can publish their tech blog posts and comment on other developers’ posts. <br/> 
+This site followes MVC paradigm. Model-View-Controller (MVC) is an architectural pattern that structures a codebase in three distinct sections, according to a software design philosophy known as the separation of concerns. <br/>
+This app uses sequelize, express-handlebars and mysql2. <br/>
 
 ## Screenshot
 This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
@@ -27,7 +29,7 @@ This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
 4-  First time user is created in the database, then user is automatically logged in. <br/> 
 5 - If user is already created in the database, then user can just login in the login page.  <br/>
 6-  When logged in, user can create a blog or comment in someone's else blog.  <br/> 
-7-  When logged in, user see their own blog on "My Blogs" and all other blogs in "Blog List".  <br/>
+7-  When logged in, user sees their own blog on "My Blogs" and all other blogs in "Blog List".  <br/>
 
 ## Contact
 You can contact me via email: marialda@bellsouth.net
