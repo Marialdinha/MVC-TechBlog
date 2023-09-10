@@ -6,6 +6,7 @@
   - [Screenshot](#screenshot)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Link](#link)
   - [Contact](#contact)
 
 ## Description
@@ -15,7 +16,7 @@ This app uses sequelize, express-handlebars and mysql2. <br/>
 
 ## Screenshot
 This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
-![localhost](./Develop/assets/Screenshot-TechBlog.png) <br/> <br/> 
+![localhost](./assets/Screenshot-TechBlog.png) <br/> <br/> 
 
 ## Installation
 1 - On Develop folder start mysql , then run: source db/schema.sql <br/>
@@ -30,6 +31,9 @@ This appliation can run form Visual Studio Code by using npm start. <br/> <br/>
 5 - If user is already created in the database, then user can just login in the login page.  <br/>
 6-  When logged in, user can create a blog or comment in someone's else blog.  <br/> 
 7-  When logged in, user sees their own blog on "My Blogs" and all other blogs in "Blog List".  <br/>
+
+## Link
+https://techblog-challenge-b189a614db53.herokuapp.com/
 
 ## Contact
 You can contact me via email: marialda@bellsouth.net
