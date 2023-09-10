@@ -17,6 +17,7 @@ User.hasMany(Blog, {
 // Comments belongsTo Blogs
 Comment.belongsTo(Blog, {
   foreignKey: 'blog_id',
+  onDelete: 'CASCADE',
 });
 
 // Blog have many Comments
